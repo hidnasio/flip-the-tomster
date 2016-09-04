@@ -1,3 +1,12 @@
-{{#each model as |card|}}
-  <img src={{card.figure}} />
-{{/each}}
+<div class="row">
+  <div class="grid-12">
+    <h1 class="title">Flip The Tomster</h1>
+  </div>
+</div>
+<div class="row row--align-center">
+  <div class="grid-8 grid-12-mobile grid-12-tablet">
+    <div class="row">
+      {{game-board cards=model}}
+    </div>
+  </div>
+</div>
