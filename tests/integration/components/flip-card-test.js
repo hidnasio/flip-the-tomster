@@ -19,7 +19,6 @@ test('it starts face down', function(assert) {
   this.set('card', card);
 
   c.render(hbs`{{flip-card card=card}}`);
-  //assert.notOk(c.isFlipped, 'Card is visible');
   assert.notOk(c.isVisibleFigure, 'Figure is not visible');
   assert.ok(c.isVisibleCover, 'Cover is visible');
 });
@@ -30,7 +29,6 @@ test('it face up when flipped', function(assert) {
 
   c.render(hbs`{{flip-card card=card isFlipped=true}}`);
 
-  //assert.ok(c.isFlipped, 'Card is visible');
   assert.ok(c.isVisibleFigure, 'Figure is not visible');
   assert.notOk(c.isVisibleCover, 'Cover is visible');
 

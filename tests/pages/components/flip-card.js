@@ -1,8 +1,8 @@
+import isBackfaceVisible from 'flip-the-tomster/tests/pages/helpers/is-backface-visible';
 import {
   hasClass,
   create
 } from 'ember-cli-page-object';
-import isBackfaceVisible from 'flip-the-tomster/tests/pages/helpers/is-backface-visible';
 
 const po = {
   isFlipped: hasClass('','.flip'),

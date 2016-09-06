@@ -3,19 +3,19 @@
   margin-top: 10px;
 }
 
-.flip-card-container {
+.game-board-card-container {
   padding: 6px;
   padding: 6px;
 }
 
 @media (min-width: 768px) {
-  .flip-card-container {
+  .game-board-card-container {
     padding: 14.55px;
   }
 }
 
 @media (min-width: 960px) {
-  .flip-card-container {
+  .game-board-card-container {
     padding: 16px;
   }
 }

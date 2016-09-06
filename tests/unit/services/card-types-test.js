@@ -2,7 +2,6 @@ import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('service:card-types', 'Unit | Service | card types', { });
 
-
 test('it generates tomsters', function(assert) {
   let service = this.subject();
   let tomsters = service.getFigures('tomster', 2, n => n);

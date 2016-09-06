@@ -1,3 +1,11 @@
-{{#each cards as |card|}}
-  {{flip-card card=card onFlip=(action "flip")}}
-{{/each}}
+{{#if isNotEmpty}}
+  {{#each setup.cards as |card|}}
+    <div class="game-board-card-container grid-3 grid-3-mobile">
+      {{yield (hash value=card.value figure=setup.figure) (action "flip")}}
+    </div>
+  {{/each}}
+{{else}}
+  <p class="game-board-empty-message">
+    THERE ISN'T ANY CARD TO DISPLAY
+  </p>
+{{/if}}

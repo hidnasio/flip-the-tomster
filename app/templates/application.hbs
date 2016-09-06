@@ -6,7 +6,9 @@
 <div class="row row--align-center">
   <div class="grid-8 grid-12-mobile grid-12-tablet">
     <div class="row">
-      {{game-board cards=model}}
+      {{#game-board setup=model as |card flip|}}
+        {{flip-card card=card onFlip=(action flip)}}
+      {{/game-board}}
     </div>
   </div>
 </div>
