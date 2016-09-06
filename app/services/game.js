@@ -53,11 +53,9 @@ export default Ember.Service.extend({
       let previous = this.get('previousCard');
       let current = card;
 
-      setTimeout(() => {
-        Ember.run(() => {
-          Ember.set(current, 'isFlipped', false);
-          Ember.set(previous, 'isFlipped', false);
-        });
+      Ember.run.later(() => {
+        Ember.set(current, 'isFlipped', false);
+        Ember.set(previous, 'isFlipped', false);
       }, 800);
 
       this.set('previousCard', null);
