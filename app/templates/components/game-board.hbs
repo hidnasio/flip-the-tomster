@@ -1,6 +1,6 @@
 {{#if isNotEmpty}}
   {{#each setup.cards as |card|}}
-    <div class="game-board-card-container grid-3 grid-3-mobile">
+    <div class="game-board-card-container grid-{{gridSize}} grid-{{gridSize}}-mobile">
       {{yield (hash value=card.value figure=setup.figure) (action "flip")}}
     </div>
   {{/each}}

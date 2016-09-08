@@ -1,13 +1,14 @@
-html, body {
+body {
   width: 100%;
   height: 100%;
 
-background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
-background-size:110px 200px;
-background-repeat:repeat-x;
-background-color: #ffd23f;
+  background:
+  linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+  radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+  radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
+  background-size:110px 200px;
+  background-repeat:repeat-x;
+  background-color: #ffd23f;
 }
 
 .title {
@@ -32,6 +33,10 @@ background-color: #ffd23f;
   padding: 6px;
 }
 
+.game-board-card-container.grid-2 {
+  padding: 8px;
+}
+
 @media (min-width: 768px) {
   .game-board-card-container {
     padding: 14.55px;
@@ -47,6 +52,10 @@ background-color: #ffd23f;
 .flip-card {
   border: none;
   position: relative;
+}
+
+.flip-card img {
+  padding: 2px;
 }
 
 .flip-card-cover,
