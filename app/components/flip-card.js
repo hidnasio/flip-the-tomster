@@ -13,5 +13,12 @@ export default Ember.Component.extend({
   }),
   click() {
     this.get('onFlip')(this);
+  },
+  didRender() {
+    //TODO: fix this
+    Ember.run.later(() => {
+      this.$('.flip-card-figure,.flip-card-cover').css('animation-duration','0.3s');
+    },1000);
+
   }
 });

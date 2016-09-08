@@ -39,35 +39,27 @@
 
 .flip-card-cover {
   background-color: red;
+
+  animation-name: show;
+  animation-duration: 0;
+  animation-fill-mode: forwards;
 }
 
 .flip-card-figure {
   -webkit-transform: rotatey(-180deg);
   transform: rotatey(-180deg);
-}
 
-.flip-card .flip-card-figure {
   animation-name: hide;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-.flip-card .flip-card-cover {
-  animation-name: show;
-  animation-duration: 0.3s;
+  animation-duration: 0;
   animation-fill-mode: forwards;
 }
 
 .flip-card.flip .flip-card-figure {
   animation-name: show;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
 }
 
 .flip-card.flip .flip-card-cover {
   animation-name: hide;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes show {
