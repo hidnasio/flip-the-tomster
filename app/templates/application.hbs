@@ -7,7 +7,7 @@
   <div class="grid-8 grid-12-mobile grid-12-tablet">
     <div class="row">
       {{#game-board setup=model as |card flip|}}
-        {{flip-card card=card onFlip=(action flip)}}
+        {{flip-card card=card onFlip=flip}}
       {{/game-board}}
     </div>
   </div>
