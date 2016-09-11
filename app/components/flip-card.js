@@ -1,15 +1,17 @@
 import Ember from 'ember';
 
+const { computed } = Ember;
+
 export default Ember.Component.extend({
   classNames: ['flip-card','one-one'],
   classNameBindings: ['isFlipped:flip'],
   isFlipped: false,
-  value: Ember.computed.alias('card.value'),
-  image: Ember.computed('card.figure', 'card.value', function(){
+  value: computed.alias('card.value'),
+  image: computed('card.figure', 'card.value', function(){
     let figure = this.get('card.figure');
     let value = this.get('card.value');
 
-    return `/images/${figure}${value}.png`;
+    return `image-${figure}${value}`;
   }),
 
   click() {
@@ -26,6 +28,5 @@ export default Ember.Component.extend({
     Ember.run.later(() => {
       this.$('.flip-card-figure,.flip-card-cover').css('animation-duration','0.3s');
     },1000);
-
   }
 });
