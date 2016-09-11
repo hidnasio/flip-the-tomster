@@ -11,7 +11,14 @@ export default Ember.Component.extend({
 
     return `/images/${figure}${value}.png`;
   }),
+
   click() {
+    console.log('click');
+    this.get('onFlip')(this);
+  },
+
+  touchStart() {
+    console.log('touch');
     this.get('onFlip')(this);
   },
   didRender() {
