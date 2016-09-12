@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     let figure = this.get('card.figure');
     let value = this.get('card.value');
 
-    return `image-${figure}${value}`;
+    return `figure-${figure}${value}`;
   }),
 
   click() {
