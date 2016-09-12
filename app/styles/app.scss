@@ -1,0 +1,308 @@
+$color-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
+$color-black: #000000;
+$color-yellow: #ffd23f;
+
+body {
+  /* stylelint-disable */
+  background:
+    linear-gradient($color-white 50%, $color-transparent 0) 0 0,
+    radial-gradient(circle closest-side, $color-white 53%, $color-transparent 0) 0 0,
+    radial-gradient(circle closest-side, $color-white 50%, $color-transparent 0) 55px 0  $color-yellow;
+  /* stylelint-enabled */
+  background-color: $color-yellow;
+  background-repeat: repeat-x;
+  background-size: 110px 200px;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  color: #ee4266;
+  font-family: Lobster, Georgia, Times, serif;
+  font-size: 80px;
+  line-height: 120px;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  -webkit-text-stroke: 1px $color-black;
+}
+
+.game-board-card-container {
+  padding: 6px;
+}
+
+.game-board-card-container.grid-2 {
+  padding: 8px;
+}
+
+@media (min-width: 768px) {
+
+  .game-board-card-container {
+    padding: 14.55px;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .game-board-card-container {
+    padding: 16px;
+  }
+}
+
+.flip-card {
+  border: none;
+  position: relative;
+}
+
+.flip-card img {
+  padding: 2px;
+}
+
+.flip-card-cover,
+.flip-card-figure {
+  animation-duration: 0s;
+  animation-fill-mode: forwards;
+  backface-visibility: hidden;
+  background-color: $color-white;
+  border-radius: 10px;
+  box-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.flip-card-cover {
+  animation-name: show;
+  background: #1b998b;
+  background-size: 300%;
+}
+
+.flip-card-figure {
+  animation-name: hide;
+  border: 2px solid #1b998b;
+  transform: rotateY(-180deg);
+}
+
+.flip-card.flip .flip-card-figure {
+  animation-name: show;
+}
+
+.flip-card.flip .flip-card-cover {
+  animation-name: hide;
+}
+
+@keyframes show {
+
+  0% {
+    transform: rotateY(-180deg);
+  }
+
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+@keyframes hide {
+
+  0% {
+    transform: rotateY(0);
+  }
+
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+
+/* Images */
+.flip-card-figure div {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.image-tomster1 {
+  background-image: url("../images/tomster1.png");
+}
+
+.image-tomster2 {
+  background-image: url("../images/tomster2.png");
+}
+
+.image-tomster3 {
+  background-image: url("../images/tomster3.png");
+}
+
+.image-tomster4 {
+  background-image: url("../images/tomster4.png");
+}
+
+.image-tomster5 {
+  background-image: url("../images/tomster3.png");
+}
+
+.image-tomster6 {
+  background-image: url("../images/tomster6.png");
+}
+
+.image-tomster7 {
+  background-image: url("../images/tomster7.png");
+}
+
+.image-tomster8 {
+  background-image: url("../images/tomster8.png");
+}
+
+.image-tomster9 {
+  background-image: url("../images/tomster9.png");
+}
+
+.image-tomster10 {
+  background-image: url("../images/tomster10.png");
+}
+
+.image-tomster11 {
+  background-image: url("../images/tomster11.png");
+}
+
+.image-tomster12 {
+  background-image: url("../images/tomster12.png");
+}
+
+.image-tomster13 {
+  background-image: url("../images/tomster13.png");
+}
+
+.image-tomster14 {
+  background-image: url("../images/tomster14.png");
+}
+
+.image-tomster15 {
+  background-image: url("../images/tomster15.png");
+}
+
+.image-tomster16 {
+  background-image: url("../images/tomster16.png");
+}
+
+.image-tomster17 {
+  background-image: url("../images/tomster17.png");
+}
+
+.image-tomster18 {
+  background-image: url("../images/tomster18.png");
+}
+
+.image-tomster19 {
+  background-image: url("../images/tomster19.png");
+}
+
+.image-tomster20 {
+  background-image: url("../images/tomster20.png");
+}
+
+.image-tomster21 {
+  background-image: url("../images/tomster21.png");
+}
+
+.image-tomster22 {
+  background-image: url("../images/tomster22.png");
+}
+
+.image-tomster23 {
+  background-image: url("../images/tomster23.png");
+}
+
+.image-tomster24 {
+  background-image: url("../images/tomster24.png");
+}
+
+.image-tomster25 {
+  background-image: url("../images/tomster25.png");
+}
+
+.image-tomster26 {
+  background-image: url("../images/tomster26.png");
+}
+
+.image-tomster27 {
+  background-image: url("../images/tomster27.png");
+}
+
+.image-tomster28 {
+  background-image: url("../images/tomster28.png");
+}
+
+.image-tomster29 {
+  background-image: url("../images/tomster29.png");
+}
+
+.image-tomster30 {
+  background-image: url("../images/tomster30.png");
+}
+
+.image-tomster31 {
+  background-image: url("../images/tomster31.png");
+}
+
+.image-tomster32 {
+  background-image: url("../images/tomster32.png");
+}
+
+.image-tomster33 {
+  background-image: url("../images/tomster33.png");
+}
+
+.image-tomster34 {
+  background-image: url("../images/tomster34.png");
+}
+
+.image-tomster35 {
+  background-image: url("../images/tomster35.png");
+}
+
+.image-tomster36 {
+  background-image: url("../images/tomster36.png");
+}
+
+.image-tomster37 {
+  background-image: url("../images/tomster37.png");
+}
+
+.image-tomster38 {
+  background-image: url("../images/tomster38.png");
+}
+
+.image-tomster39 {
+  background-image: url("../images/tomster39.png");
+}
+
+.image-tomster40 {
+  background-image: url("../images/tomster40.png");
+}
+
+.image-tomster41 {
+  background-image: url("../images/tomster41.png");
+}
+
+.image-tomster42 {
+  background-image: url("../images/tomster42.png");
+}
+
+.image-tomster43 {
+  background-image: url("../images/tomster43.png");
+}
