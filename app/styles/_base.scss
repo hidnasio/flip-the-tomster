@@ -12,21 +12,22 @@ body {
   width: 100%;
 }
 
-@media (max-width: $size-phone) {
-
-  .grid-10-mobile {
-    flex-basis: 100%;
-  }
+.canvas {
+  max-width: 80vh;
 }
 
 .title {
+  margin-top: 10px;
+  min-height: 120px;
+  text-align: center;
+}
+
+.title a{
   color: $color-red;
   font-family: $font-lobster;
   font-size: 58px;
   line-height: 72px;
-  margin-top: 10px;
-  min-height: 120px;
-  text-align: center;
+  text-decoration: none;
   text-shadow:
     3px 3px 0 $color-black,
     -1px -1px 0 $color-black,
@@ -34,6 +35,10 @@ body {
     -1px 1px 0 $color-black,
     1px 1px 0 $color-black;
   -webkit-text-stroke: 1px $color-black;
+
+  &.visited {
+    color: $color-red;
+  }
 
   @media (min-width: $size-tablet) {
     font-size: 80px;

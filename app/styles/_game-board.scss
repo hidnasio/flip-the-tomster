@@ -1,17 +1,26 @@
-.game-board-card-container {
-  padding: 6px;
-}
-
-@media (min-width: $size-tablet) {
+.game-board {
+  padding: 0;
 
   .game-board-card-container {
     padding: 6px;
+    padding-bottom: 10px;
+
+    @media (min-width: $size-tablet) {
+      padding: 6px;
+    }
+
+    @media (min-width: $size-desktop) {
+      padding: 6px;
+    }
   }
-}
 
-@media (min-width: $size-desktop) {
+  .game-board-left-column {
+    max-width: 50%;
+    padding-right: 0;
+  }
 
-  .game-board-card-container {
-    padding: 6px;
+  .game-board-right-column {
+    max-width: 50%;
+    padding-left: 0;
   }
 }

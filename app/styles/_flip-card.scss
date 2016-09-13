@@ -1,11 +1,12 @@
 .flip-card {
+  backface-visibility: hidden;
   border: none;
   position: relative;
 }
 
 .flip-card-cover,
 .flip-card-figure {
-  animation-duration: 0s;
+  animation-duration: .3s;
   animation-fill-mode: forwards;
   backface-visibility: hidden;
   background-color: $color-white;
@@ -24,23 +25,35 @@
 }
 
 .flip-card-cover {
-  animation-name: show;
   background: #1b998b;
   background-size: 300%;
 }
 
 .flip-card-figure {
-  animation-name: hide;
   border: 2px solid #1b998b;
   transform: rotateY(-180deg);
 }
 
-.flip-card.flip .flip-card-figure {
-  animation-name: show;
+.flip-card.show {
+
+  .flip-card-figure {
+    animation-name: show;
+  }
+
+  .flip-card-cover {
+    animation-name: hide;
+  }
 }
 
-.flip-card.flip .flip-card-cover {
-  animation-name: hide;
+.flip-card.veil {
+
+  .flip-card-figure {
+    animation-name: hide;
+  }
+
+  .flip-card-cover {
+    animation-name: show;
+  }
 }
 
 /* Images */

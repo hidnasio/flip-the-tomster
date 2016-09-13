@@ -4,8 +4,9 @@ const { computed } = Ember;
 
 export default Ember.Component.extend({
   classNames: ['flip-card','one-one'],
-  classNameBindings: ['isFlipped:flip'],
+  classNameBindings: ['isFlipped:show:veil'],
   isFlipped: false,
+
   value: computed.alias('card.value'),
   image: computed('card.figure', 'card.value', function(){
     let figure = this.get('card.figure');
@@ -22,11 +23,5 @@ export default Ember.Component.extend({
   touchStart() {
     console.log('touch');
     this.get('onFlip')(this);
-  },
-  didRender() {
-    //TODO: fix this
-    Ember.run.later(() => {
-      this.$('.flip-card-figure,.flip-card-cover').css('animation-duration','0.3s');
-    },1000);
   }
 });

@@ -2,28 +2,40 @@ import Ember from 'ember';
 import randomize from 'flip-the-tomster/utils/shuffle';
 import range from 'flip-the-tomster/utils/range';
 import Card from 'flip-the-tomster/models/card';
+import ENV from 'flip-the-tomster/config/environment';
 
 export default Ember.Service.extend({
   shuffle: randomize,
   previousCard: null,
+  scheduledAnimation: null,
 
   create({size = 16, figure = 'tomster'} = {size: 16, figure: 'tomster'}) {
     return Ember.Object.create({
-      cards: this.generateCards(size),
+      cards: this.generateCards(size, figure),
       figure: figure
     });
   },
 
-  pickRandomValues(amount) {
-    return this.shuffle(range(1, 32)).slice(0, amount);
-  },
-
-  generateCards(amount) {
+  generateCards(amount, figure) {
     let numberOfValues = amount / 2;
-    let values = this.pickRandomValues(numberOfValues);
+    let values = this.pickRandomValues(numberOfValues, figure);
     let cards = Card.generate(values);
 
     return this.shuffle(cards);
+  },
+
+  pickRandomValues(amount, figure) {
+    let numberOfFigures = ENV.figures[figure];
+
+    return this.shuffle(range(1, numberOfFigures)).slice(0, amount);
+  },
+
+  reset() {
+    this.set('previousCard', null);
+    let animation = this.get('scheduledAnimation');
+    if(animation) {
+      Ember.run.cancel(animation);
+    }
   },
 
   flip(card) {
@@ -53,11 +65,12 @@ export default Ember.Service.extend({
       let previous = this.get('previousCard');
       let current = card;
 
-      Ember.run.later(() => {
+      let animation = Ember.run.later(() => {
         Ember.set(current, 'isFlipped', false);
         Ember.set(previous, 'isFlipped', false);
       }, 800);
 
+      this.set('scheduledAnimation', animation);
       this.set('previousCard', null);
 
       return false;
