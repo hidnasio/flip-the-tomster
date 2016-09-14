@@ -12,9 +12,14 @@ body {
   width: 100%;
 }
 
-.canvas {
-  max-width: 80vh;
+* {
+  user-select: none;
 }
+
+p {
+  width: 100%;
+}
+
 
 .title {
   margin-top: 10px;
@@ -22,7 +27,7 @@ body {
   text-align: center;
 }
 
-.title a{
+.title a {
   color: $color-red;
   font-family: $font-lobster;
   font-size: 58px;
@@ -47,5 +52,75 @@ body {
 
   @media (min-width: $size-phone) and (max-width: $size-tablet) {
     line-height: 120px;
+  }
+}
+
+.section {
+  font-family: Play;
+  font-size: 30px;
+  line-height: 80px;
+
+  + .section {
+    margin-top: 40px;
+
+    @media (max-width: $size-tablet) {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  .section-title {
+    color: #f8ffe5;
+    font-family: Play;
+    font-size: 60px;
+    line-height: 100px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow:
+      3px 3px 0 #000000,
+      -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+      -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+    -webkit-text-stroke: 1px #000000;
+  }
+}
+
+.back {
+  color: #f8ffe5;
+  font-family: Play;
+  font-size: 40px;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow:
+    3px 3px 0 #000000,
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+  -webkit-text-stroke: 1px #000000;
+
+  &:hover {
+    color: $color-aqua;
+  }
+}
+
+.switch {
+  padding-top: 0;
+
+  &.checkbox {
+
+    input + label {
+      background-color: $color-red;
+    }
+
+    input:checked + label {
+      background-color: $color-aqua;
+    }
   }
 }

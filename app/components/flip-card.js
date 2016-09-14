@@ -16,12 +16,10 @@ export default Ember.Component.extend({
   }),
 
   click() {
-    console.log('click');
     this.get('onFlip')(this);
   },
 
   touchStart() {
-    console.log('touch');
     this.get('onFlip')(this);
   }
 });

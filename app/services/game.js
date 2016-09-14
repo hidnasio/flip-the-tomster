@@ -3,13 +3,17 @@ import randomize from 'flip-the-tomster/utils/shuffle';
 import range from 'flip-the-tomster/utils/range';
 import Card from 'flip-the-tomster/models/card';
 import ENV from 'flip-the-tomster/config/environment';
+import preference from 'ember-preferences/computed';
 
 export default Ember.Service.extend({
   shuffle: randomize,
   previousCard: null,
   scheduledAnimation: null,
+  preferences: Ember.inject.service(),
+  size: preference('size', { defaultValue: 16 }),
+  figure: preference('figure', { defaultValue: 'tomster'}),
 
-  create({size = 16, figure = 'tomster'} = {size: 16, figure: 'tomster'}) {
+  create({size = this.get('size'), figure = this.get('figure')} = {size: this.get('size'), figure: this.get('figure')}) {
     return Ember.Object.create({
       cards: this.generateCards(size, figure),
       figure: figure
