@@ -2,7 +2,7 @@
 
 Flip cards game featuring Tomster's 100 different faces. A small Ember.js game written originally for the [Ember Montevideo Meetup](https://www.meetup.com/ember-montevideo).
 
-Now maintained by the awesome [MVDWG](https://github.com/mvdwg) team.
+Now maintained by the awesome [MVDWG :elephant:](https://github.com/mvdwg) team.
 
 ![screenshot](screenshot.png)
 
