@@ -1,7 +1,7 @@
 {
   "name": "flip-the-tomster",
   "version": "0.0.0",
-  "description": "Small description for flip-the-tomster goes here",
+  "description": "Flip cards game featuring Tomster's 100 different faces. A small Ember.js game written originally for the Ember Montevideo Meetup",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,11 +12,11 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/mvdwg/flip-the-tomster.git",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ignacio Ferreira <hidnasio@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "amazium": "^4.1.2",
