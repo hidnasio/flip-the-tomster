@@ -1,53 +1,35 @@
-# Flip-the-tomster
+# Flip The Tomster
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Flip cards game featuring Tomster's 100 different faces. A small Ember.js game written originally for the [Ember Montevideo Meetup](https://www.meetup.com/ember-montevideo).
 
-## Prerequisites
+Now maintained by the awesome [MVDWG :elephant:](https://github.com/mvdwg) team.
 
-You will need the following things properly installed on your computer.
+![screenshot](screenshot.png)
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+## Contributing
 
-## Installation
+You can propose features and report issues in [Github's issue tracker](https://github.com/mvdwg/flip-the-tomster/issues).
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+## Development
 
-## Running / Development
+```sh
+$ git clone https://github.com/mvdwg/flip-the-tomster.git
+$ cd flip-the-tomster
+$ npm install
+$ bower install
+$ ember serve
+```
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+And then visit [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+### Project's health
 
-Make use of the many generators for code, try `ember help generate` for more details
+[![Build Status](https://travis-ci.org/mvdwg/flip-the-tomster.svg?branch=master)](https://travis-ci.org/mvdwg/flip-the-tomster)
 
-### Running Tests
+## License
 
-* `ember test`
-* `ember test --server`
+flip-the-tomster is licensed under the MIT license.
 
-### Building
+Tomster is a registered and protected trademark by [TILDE INC.](http://www.tilde.io).
 
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+See [LICENSE](./LICENSE.md) for the full license text.
