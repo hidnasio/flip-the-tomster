@@ -6,7 +6,19 @@
 
 .flip-card-cover,
 .flip-card-figure {
-  animation-duration: .3s;
+  animation-duration: 0s;
+}
+
+.animated {
+
+  .flip-card-cover,
+  .flip-card-figure {
+    animation-duration: .3s;
+  }
+}
+
+.flip-card-cover,
+.flip-card-figure {
   animation-fill-mode: forwards;
   backface-visibility: hidden;
   background-color: $color-white;
