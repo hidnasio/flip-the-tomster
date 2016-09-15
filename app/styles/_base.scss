@@ -1,15 +1,5 @@
-body {
-  /* stylelint-disable */
-  background:
-    linear-gradient($color-white 50%, $color-transparent 0) 0 0,
-    radial-gradient(circle closest-side, $color-white 53%, $color-transparent 0) 0 0,
-    radial-gradient(circle closest-side, $color-white 50%, $color-transparent 0) 55px 0  $color-yellow;
-  /* stylelint-enable */
-  background-color: $color-yellow;
-  background-repeat: repeat-x;
-  background-size: 110px 200px;
-  height: 100%;
-  width: 100%;
+body > .ember-view {
+  background: #f8ffe5;
 }
 
 * {

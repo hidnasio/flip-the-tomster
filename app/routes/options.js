@@ -28,6 +28,20 @@ export default Ember.Route.extend({
           label: '8 x 8',
           value: 64
         }
+      ],
+      times: [
+        {
+          label: '60',
+          value: 60
+        },
+        {
+          label: '120',
+          value: 120
+        },
+        {
+          label: '180',
+          value: 180
+        }
       ]
     };
   }

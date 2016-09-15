@@ -32,6 +32,20 @@
   </div>
   <div class="row section">
     <div class="grid-4">
+      Time
+    </div>
+    <div class="grid-8">
+      {{#each model.times as |option|}}
+        {{#options-button option=option click=(action 'setTime' option) selected=time as |option|}}
+            <span class="options-button-size">
+              {{option.label}}
+            </span>
+        {{/options-button}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="row section">
+    <div class="grid-4">
       Music
     </div>
     <div class="grid-8">

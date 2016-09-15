@@ -5,3 +5,33 @@
 @import "flip-card";
 @import "main-menu";
 @import "options";
+
+.board-container {
+  /* stylelint-disable */
+  background:
+    linear-gradient($color-white 50%, $color-transparent 0) 0 0,
+    radial-gradient(circle closest-side, $color-white 53%, $color-transparent 0) 0 0,
+    radial-gradient(circle closest-side, $color-white 50%, $color-transparent 0) 55px 0  $color-yellow;
+  /* stylelint-enable */
+  background-color: $color-yellow;
+  background-repeat: repeat-x;
+  height: 100%;
+  width: 100%;
+  background-size: 110px 200%;
+}
+
+.game-duration-60 {
+  transition: background-size 60s ease;
+}
+
+.game-duration-120 {
+  transition: background-size 120s ease;
+}
+
+.game-duration-180 {
+  transition: background-size 180s ease;
+}
+
+.started {
+  background-size: 110px 20%;
+}

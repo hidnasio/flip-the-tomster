@@ -21,6 +21,17 @@ export default Ember.Component.extend({
 
     return size;
   }),
+
+  startTimer: Ember.on('didRender', function() {
+    Ember.run.later(() => {
+      this.get('started')();
+    }, 1000);
+  }),
+
+  stopTimer: Ember.on('didDestroyElement', function() {
+    this.get('stoped')();
+  }),
+
   actions: {
     flip(card) {
       this.get('game').flip(card);
