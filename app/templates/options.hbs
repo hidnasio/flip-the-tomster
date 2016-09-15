@@ -10,7 +10,7 @@
     </div>
     <div class="grid-8">
       {{#each model.figures as |option|}}
-        {{#options-button option=option click=(action 'setFigure' option) selected=figure as |option|}}
+        {{#options-button option=option click=(route-action 'setFigure' option) selected=figure as |option|}}
           <img src="{{option.image}}" class="options-button-figure">
         {{/options-button}}
       {{/each}}
@@ -22,7 +22,7 @@
     </div>
     <div class="grid-8">
       {{#each model.sizes as |option|}}
-        {{#options-button option=option click=(action 'setSize' option) selected=size as |option|}}
+        {{#options-button option=option click=(route-action 'setSize' option) selected=size as |option|}}
             <span class="options-button-size">
               {{option.label}}
             </span>
