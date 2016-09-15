@@ -25,7 +25,12 @@
   {{/if}}
 </div>
 <div class="row section">
-  <div class="grid-12">
+  <div class="grid-5 grid-5-mobile">
     {{#link-to "application" class="back"}}&lt; Go Back{{/link-to}}
+  </div>
+  <div class="grid-7 grid-7-mobile score">
+    <span class="strong">Hits:</span><span class="hits"> {{hits}} </span>
+    <span class="strong">Misses:</span><span class="misses"> {{misses}} </span>
+    <span class="strong">Rate:</span><span> {{rate}}% </span>
   </div>
 </div>

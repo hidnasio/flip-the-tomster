@@ -26,4 +26,21 @@
     max-width: 50%;
     padding-left: 0;
   }
+
+  .hits {
+    color: $color-aqua;
+  }
+
+  .misses {
+    color: $color-red;
+  }
+
+  .strong {
+    font-weight: 600;
+  }
+
+  .score {
+    font-size: 25px;
+    text-align: right;
+  }
 }

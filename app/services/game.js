@@ -8,6 +8,12 @@ export default Ember.Service.extend({
   shuffle: randomize,
   previousCard: null,
   scheduledAnimation: null,
+  hits: 0,
+  misses: 0,
+
+  tries: Ember.computed('hits', 'misses', function() {
+    return this.get('hits') + this.get('misses');
+  }),
 
   create(options = {}) {
     let size = options.size || 16;
@@ -34,7 +40,11 @@ export default Ember.Service.extend({
   },
 
   reset() {
-    this.set('previousCard', null);
+    this.setProperties({
+      previousCard: null,
+      hits: 0,
+      misses: 0
+    });
     let animation = this.get('scheduledAnimation');
     if(animation) {
       Ember.run.cancel(animation);
@@ -56,6 +66,7 @@ export default Ember.Service.extend({
 
     // previous card and current card equals -> flip current
     if(this.get('previousCard.value') === card.get('value')) {
+      this.incrementProperty('hits');
       card.set('isFlipped', true);
       this.set('previousCard', null);
       return false;
@@ -63,6 +74,7 @@ export default Ember.Service.extend({
 
     // previous card and current card different -> flip previous and show current
     if(this.get('previousCard.value') !== card.get('value')) {
+      this.incrementProperty('misses');
       card.set('isFlipped', true);
 
       let previous = this.get('previousCard');
