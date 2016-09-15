@@ -1,6 +1,10 @@
 import Ember from 'ember';
+import preference from 'ember-preferences/computed';
 
 export default Ember.Route.extend({
+  size: preference('size'),
+  figure: preference('figure'),
+
   model() {
     return {
       figures: [
@@ -30,5 +34,14 @@ export default Ember.Route.extend({
         }
       ]
     };
+  },
+
+  actions: {
+    setFigure(option) {
+      this.set('figure', option.value);
+    },
+    setSize(option) {
+      this.set('size', option.value);
+    }
   }
 });
