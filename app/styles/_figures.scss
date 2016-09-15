@@ -1,0 +1,13 @@
+@for $i from 1 through 43 {
+
+  .figure-tomster#{$i} {
+    background-image: url("../images/tomster#{$i}.png");
+  }
+}
+
+@for $i from 1 through 32 {
+
+  .figure-dog#{$i} {
+    background-image: url("../images/dog#{$i}.png");
+  }
+}

@@ -1,0 +1,29 @@
+.game-board {
+  margin: 0 auto;
+  max-width: 75vh;
+  min-width: 360px;
+  padding: 0;
+
+  .game-board-card-container {
+    padding: 6px;
+    padding-bottom: 10px;
+
+    @media (min-width: $size-tablet) {
+      padding: 6px;
+    }
+
+    @media (min-width: $size-desktop) {
+      padding: 6px;
+    }
+  }
+
+  .game-board-left-column {
+    max-width: 50%;
+    padding-right: 0;
+  }
+
+  .game-board-right-column {
+    max-width: 50%;
+    padding-left: 0;
+  }
+}

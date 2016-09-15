@@ -1,0 +1,53 @@
+<div class="options grid-12">
+  <div class="row section">
+    <div class="grid-12 section-title">
+      Options
+    </div>
+  </div>
+  <div class="row section">
+    <div class="grid-4">
+      Figure
+    </div>
+    <div class="grid-8">
+      {{#each model.figures as |option|}}
+        {{#options-button option=option click=(action 'setFigure' option) selected=figure as |option|}}
+          <img src="{{option.image}}" class="options-button-figure">
+        {{/options-button}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="row section">
+    <div class="grid-4">
+      Size
+    </div>
+    <div class="grid-8">
+      {{#each model.sizes as |option|}}
+        {{#options-button option=option click=(action 'setSize' option) selected=size as |option|}}
+            <span class="options-button-size">
+              {{option.label}}
+            </span>
+        {{/options-button}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="row section">
+    <div class="grid-4">
+      Music
+    </div>
+    <div class="grid-8">
+      <fieldset class="options-switch">
+        <span class="checkbox switch">
+          <span>
+            <input type="checkbox" tabindex="20" name="r1" id="r1" checked>
+            <label for="r1"></label>
+          </span>
+        </span>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row section">
+    <div class="grid-12">
+      {{#link-to "application" class="back"}}&lt; Go Back{{/link-to}}
+    </div>
+  </div>
+</div>
