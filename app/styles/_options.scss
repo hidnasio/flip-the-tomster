@@ -1,0 +1,85 @@
+.options {
+
+  .options-title {
+    color: #f8ffe5;
+    font-family: Play;
+    font-size: 60px;
+    line-height: 100px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow:
+      3px 3px 0 #000000,
+      -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+      -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+    -webkit-text-stroke: 1px #000000;
+  }
+
+  .options-button {
+    display: inline-block;
+    height: 80px;
+    margin-right: 20px;
+    width: 80px;
+  }
+
+
+  .options-button-content {
+    background-color: #f8ffe5;
+    border: 4px solid $color-transparent;
+    border-radius: 10px;
+    box-shadow:
+      3px 3px 0 #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    cursor: pointer;
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    width: 80px;
+  }
+
+  .options-button-content:hover,
+  .selected .options-button-content {
+    border: 4px solid $color-aqua;
+  }
+
+  .options-button-figure,
+  .options-button-size {
+    border-radius: 10px;
+    height: 100%;
+    padding: 2px;
+    width: 100%;
+  }
+
+  .options-button-figure {
+    vertical-align: inherit;
+  }
+
+  .options-button-size {
+    background-image: url("/images/option-grid.png");
+    background-size: 100%;
+    font-size: 29px;
+    left: 50%;
+    line-height: 60px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  .options-switch {
+    display: inline-block;
+    left: initial;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+    top: initial;
+    vertical-align: middle;
+  }
+}

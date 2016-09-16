@@ -1,0 +1,9 @@
+<div class="row row--align-center board-container {{transitionClass}} {{if gameStarted 'started' ''}}">
+  <div class="grid-8 grid--ofset-2 grid-10-tablet">
+    <div class="row canvas">
+      {{#game-board setup=model started=(action 'started') stoped=(action 'stoped') as |card flip|}}
+        {{flip-card card=card onFlip=flip}}
+      {{/game-board}}
+    </div>
+  </div>
+</div>

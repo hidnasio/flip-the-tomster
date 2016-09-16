@@ -20,8 +20,13 @@ module.exports = function(environment) {
 
     googleFonts: [
       'Lobster',
-      'Cabin'
-    ]
+      'Play'
+    ],
+
+    figures: {
+      tomster: 43,
+      dog: 32
+    }
   };
 
   if (environment === 'development') {
