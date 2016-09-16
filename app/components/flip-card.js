@@ -4,7 +4,11 @@ const { computed } = Ember;
 
 export default Ember.Component.extend({
   classNames: ['flip-card','one-one'],
-  classNameBindings: ['isFlipped:show:veil'],
+  classNameBindings: [
+    'isFlipped:show:veil',
+    'isAnimated:animated'
+  ],
+  isAnimated: false,
   isFlipped: false,
 
   value: computed.alias('card.value'),
@@ -16,10 +20,12 @@ export default Ember.Component.extend({
   }),
 
   click() {
+    this.set('isAnimated', true);
     this.get('onFlip')(this);
   },
 
   touchStart() {
+    this.set('isAnimated', true);
     this.get('onFlip')(this);
   }
 });
