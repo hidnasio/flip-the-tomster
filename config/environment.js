@@ -26,7 +26,16 @@ module.exports = function(environment) {
     figures: {
       tomster: 43,
       dog: 32
-    }
+    },
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['production'],
+        config: {
+          id: 'UA-84269222-1'
+        }
+      }
+    ]
   };
 
   if (environment === 'development') {
