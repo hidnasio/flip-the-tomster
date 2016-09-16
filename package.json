@@ -45,6 +45,7 @@
     "ember-data": "^2.7.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
+    "ember-metrics": "0.6.3",
     "ember-pagefront": "0.11.2",
     "ember-preferences": "1.2.1",
     "ember-qunit-nice-errors": "1.1.2",
