@@ -3,7 +3,7 @@ import Ember from 'ember';
 const { computed } = Ember;
 
 export default Ember.Component.extend({
-  classNames: ['flip-card','one-one'],
+  classNames: ['flip-card'],
   classNameBindings: [
     'isFlipped:show:veil',
     'isAnimated:animated'

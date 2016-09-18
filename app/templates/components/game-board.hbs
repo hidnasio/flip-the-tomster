@@ -1,36 +1,25 @@
-<div class="row">
+<div class="section">
   {{#if isNotEmpty}}
-    <div class="grid-6 game-board-left-column">
-      <div class="row">
-        {{#each leftColumn as |card index|}}
-          <div class="game-board-card-container grid-{{gridSize}} grid-{{gridSize}}-mobile">
-            {{yield (hash value=card.value figure=setup.figure) (action "flip")}}
-          </div>
-        {{/each}}
+    {{#each cards as |card index|}}
+      <div class="game-board-card-container game-board-size-{{gridSize}}">
+      {{yield (hash value=card.value figure=setup.figure) (action "flip")}}
       </div>
-    </div>
-    <div class="grid-6 game-board-right-column">
-      <div class="row">
-        {{#each rigthColumn as |card|}}
-          <div class="game-board-card-container grid-{{gridSize}} grid-{{gridSize}}-mobile">
-            {{yield (hash value=card.value figure=setup.figure) (action "flip")}}
-          </div>
-        {{/each}}
-      </div>
-    </div>
+    {{/each}}
   {{else}}
     <p class="game-board-empty-message">
       THERE ISN'T ANY CARD TO DISPLAY
     </p>
   {{/if}}
 </div>
-<div class="row section">
-  <div class="grid-5 grid-5-mobile">
-    {{#link-to "application" class="back"}}&lt; Go Back{{/link-to}}
+
+{{#if isNotEmpty}}
+  <div class="section section-right score">
+    <span class="score-label">hits:</span><span class="score-value hits">{{hits}}</span>
+    <span class="score-label">misses:</span><span class="score-value misses">{{misses}}</span>
+    <span class="score-label">rate:</span><span class="score-value">{{rate}}%</span>
   </div>
-  <div class="grid-7 grid-7-mobile score">
-    <span class="strong">Hits:</span><span class="hits"> {{hits}} </span>
-    <span class="strong">Misses:</span><span class="misses"> {{misses}} </span>
-    <span class="strong">Rate:</span><span> {{rate}}% </span>
-  </div>
+{{/if}}
+
+<div class="section">
+  {{#link-to "application" class="section-back"}}&lt; Go Back{{/link-to}}
 </div>

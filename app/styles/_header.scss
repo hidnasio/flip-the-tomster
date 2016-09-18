@@ -1,0 +1,14 @@
+.header {
+  font-size: 1em;
+  min-height: rem(110);
+  @include waves;
+
+  .header-title {
+    color: $color-red;
+    font-family: $font-heading;
+    font-size: em(80);
+    text-align: center;
+    text-decoration: none;
+    @include text-shadow-effect;
+  }
+}

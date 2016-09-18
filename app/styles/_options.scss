@@ -1,85 +1,92 @@
-.options {
+.options-label {
+  flex: 1 1;
+  line-height: rem(60);
+  font-size: em(30);
+}
 
-  .options-title {
-    color: #f8ffe5;
-    font-family: Play;
-    font-size: 60px;
-    line-height: 100px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    text-decoration: none;
-    text-shadow:
-      3px 3px 0 #000000,
-      -1px -1px 0 #000000,
-      1px -1px 0 #000000,
-      -1px 1px 0 #000000,
-      1px 1px 0 #000000;
-    -webkit-text-stroke: 1px #000000;
+.options-container {
+  flex: 2 1;
+}
+
+.options-button {
+  display: inline-block;
+  height: rem(80);
+  margin-right: rem(20);
+  width: rem(80);
+  background-color: $color-white;
+  border: rem(4) solid $color-transparent;
+  @include box-shadow-effect;
+  cursor: pointer;
+  position: relative;
+
+  &:hover,
+  &.selected {
+    border: rem(4) solid $color-aqua;
   }
+}
 
-  .options-button {
-    display: inline-block;
-    height: 80px;
-    margin-right: 20px;
-    width: 80px;
-  }
+.options-button-figure,
+.options-button-size {
+  border-radius: rem(10);
+  height: 100%;
+  padding: em(2);
+  width: 100%;
+  line-height: rem(60);
+}
 
+.options-button-size {
+  background-image: url("/images/option-grid.png");
+  background-size: 100%;
+  font-size: rem(29);
+  padding: rem(5);
+  position: absolute;
+  white-space: nowrap;
+}
 
-  .options-button-content {
-    background-color: #f8ffe5;
-    border: 4px solid $color-transparent;
-    border-radius: 10px;
-    box-shadow:
-      3px 3px 0 #000,
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-    cursor: pointer;
-    display: inline-block;
-    height: 80px;
-    position: relative;
-    width: 80px;
-  }
+.options-switch {
+  position: relative;
+  display: inline-block;
+  width: rem(60);
+  height: rem(34);
+}
 
-  .options-button-content:hover,
-  .selected .options-button-content {
-    border: 4px solid $color-aqua;
-  }
+.options-switch .options-switch-checkbox {
+  display: none;
+}
 
-  .options-button-figure,
-  .options-button-size {
-    border-radius: 10px;
-    height: 100%;
-    padding: 2px;
-    width: 100%;
-  }
+.options-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-red;
+  transition: .4s;
+  @include box-shadow-effect;
+}
 
-  .options-button-figure {
-    vertical-align: inherit;
-  }
+.options-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: rem(26);
+  width: rem(26);
+  left: rem(4);
+  bottom: rem(4);
+  background-color: $color-white;
+  transition: .4s;
+  border-radius: 50%;
+  border: rem(2) solid $color-black;
+}
 
-  .options-button-size {
-    background-image: url("/images/option-grid.png");
-    background-size: 100%;
-    font-size: 29px;
-    left: 50%;
-    line-height: 60px;
-    padding: 5px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-  }
+.options-switch-checkbox:checked + .options-switch-slider {
+  background-color: $color-aqua;
+}
 
-  .options-switch {
-    display: inline-block;
-    left: initial;
-    line-height: 80px;
-    margin: 0;
-    padding: 0;
-    top: initial;
-    vertical-align: middle;
-  }
+.options-switch-checkbox:focus + .options-switch-slider {
+  box-shadow: 0 0 rem(1) $color-black;
+}
+
+.options-switch-checkbox:checked + .options-switch-slider:before {
+  transform: translateX(rem(26));
 }

@@ -1,3 +1,5 @@
+$browser-context: 19;
+
 $color-white: #f8ffe5;
 $color-transparent: rgba(255, 255, 255, 0);
 $color-black: #000000;
@@ -5,9 +7,61 @@ $color-yellow: #ffd23f;
 $color-red: #ee4266;
 $color-aqua: #1b998b;
 
-$font-lobster: Lobster, Georgia, Times, serif;
+$size-extra-small: 460px;
+$size-small: 768px;
+$size-medium: 992px;
+$size-large: 1200px;
 
-$size-desktop-big: 1200px;
-$size-desktop: 960px;
-$size-tablet: 768px;
-$size-phone: 407px;
+$font-base: Arial;
+$font-heading: Lobster, Georgia, Times, serif;
+$font-subheading: Play;
+
+@mixin text-shadow-effect() {
+  text-shadow:
+    em(.8) em(.8) 0 $color-black,
+    em(-.30) em(-.30) 0 $color-black,
+    em(.30) em(-.30) 0 $color-black,
+    em(-.30) em(.30) 0 $color-black,
+    em(.30) em(.30) 0 $color-black;
+  -webkit-text-stroke: em(.30) $color-black;
+}
+
+@mixin box-shadow-effect() {
+  border-radius: rem(10);
+  box-shadow:
+    rem(3) rem(3) 0 $color-black,
+    rem(-1) rem(-1) 0 $color-black,
+    rem(1) rem(-1) 0 $color-black,
+    rem(-1) rem(1) 0 $color-black,
+    rem(1) rem(1) 0 $color-black;
+}
+
+@mixin waves() {
+  /* stylelint-disable */
+  background:
+    linear-gradient($color-white em(90),$color-transparent em(0)),
+    radial-gradient(circle closest-side,$color-white em(30),$color-transparent 0),
+    radial-gradient(circle closest-side,$color-white em(30),$color-transparent 0) em(55) 0 $color-transparent;
+  /* stylelint-enable */
+  background-color: $color-transparent;
+  background-repeat: repeat-x;
+  background-size: em(110) em(155);
+}
+
+@mixin heading-font($size) {
+  color: $color-white;
+  font-family: $font-subheading;
+  font-size: rem($size);
+  line-height: 1.4;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include text-shadow-effect();
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}rem;
+}

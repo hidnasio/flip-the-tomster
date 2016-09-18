@@ -2,6 +2,8 @@
   backface-visibility: hidden;
   border: none;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .flip-card-cover,
@@ -10,7 +12,6 @@
 }
 
 .animated {
-
   .flip-card-cover,
   .flip-card-figure {
     animation-duration: .3s;
@@ -22,13 +23,7 @@
   animation-fill-mode: forwards;
   backface-visibility: hidden;
   background-color: $color-white;
-  border-radius: 10px;
-  box-shadow:
-    3px 3px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  @include box-shadow-effect();
   height: 100%;
   left: 0;
   position: absolute;
@@ -37,12 +32,11 @@
 }
 
 .flip-card-cover {
-  background: #1b998b;
-  background-size: 300%;
+  background: $color-aqua;
 }
 
 .flip-card-figure {
-  border: 2px solid #1b998b;
+  border: em(2) solid $color-aqua;
   transform: rotateY(-180deg);
 }
 

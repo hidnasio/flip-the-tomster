@@ -1,46 +1,46 @@
 .game-board {
-  margin: 0 auto;
-  max-width: 75vh;
-  min-width: 360px;
-  padding: 0;
+  font-size: 1em;
 
-  .game-board-card-container {
-    padding: 6px;
-    padding-bottom: 10px;
-
-    @media (min-width: $size-tablet) {
-      padding: 6px;
-    }
-
-    @media (min-width: $size-desktop) {
-      padding: 6px;
-    }
+  .game-board-size-4 {
+    flex: 1 1 auto;
+    width: rem(174);
+    height: rem(174);
+    padding: rem(10);
   }
 
-  .game-board-left-column {
-    max-width: 50%;
-    padding-right: 0;
+  .game-board-size-6 {
+    flex: 1 1 auto;
+    width: rem(115);
+    height: rem(115);
+    padding: rem(6);
   }
 
-  .game-board-right-column {
-    max-width: 50%;
-    padding-left: 0;
+  .game-board-size-8 {
+    flex: 1 1 auto;
+    width: rem(85);
+    height: rem(85);
+    padding: rem(5);
   }
 
-  .hits {
-    color: $color-aqua;
-  }
-
-  .misses {
-    color: $color-red;
-  }
-
-  .strong {
-    font-weight: 600;
-  }
 
   .score {
-    font-size: 25px;
-    text-align: right;
+    font-size: em(25);
+
+    .score-label {
+      margin-left: em(10);
+      margin-right: em(5);
+    }
+
+    .score-value {
+      @include heading-font(25);
+
+      &.hits {
+        color: $color-aqua;
+      }
+
+      &.misses {
+        color: $color-red;
+      }
+    }
   }
 }
