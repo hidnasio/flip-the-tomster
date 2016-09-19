@@ -38,9 +38,65 @@
   </div>
   <div class="options-container">
     <label class="options-switch">
-      <input type="checkbox" class="options-switch-checkbox">
+      {{input
+        type="checkbox"
+        checked=model.music
+        change=(route-action "setMusic")
+        class="options-switch-checkbox"
+      }}
       <div class="options-switch-slider"></div>
     </label>
+  </div>
+</div>
+
+<div class="section">
+  <div class="options-label">
+    Music volume
+  </div>
+  <div class="options-container">
+    {{input
+      type="range"
+      min="0.1"
+      max="1"
+      value=model.musicVolume
+      step=0.1
+      input=(route-action "setMusicVolume")
+      change=(route-action "setMusicVolume")
+    }}
+  </div>
+</div>
+
+<div class="section">
+  <div class="options-label">
+    Sound effects
+  </div>
+  <div class="options-container">
+    <label class="options-switch">
+      {{input
+        type="checkbox"
+        checked=model.effects
+        change=(route-action "setEffects")
+        class="options-switch-checkbox"
+      }}
+      <div class="options-switch-slider"></div>
+    </label>
+  </div>
+</div>
+
+<div class="section">
+  <div class="options-label">
+    Effects volume
+  </div>
+  <div class="options-container">
+    {{input
+      type="range"
+      min="0.1"
+      max="1"
+      value=model.effectsVolume
+      step=0.1
+      input=(route-action "setEffectsVolume")
+      change=(route-action "setEffectsVolume")
+    }}
   </div>
 </div>
 
