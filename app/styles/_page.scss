@@ -1,0 +1,11 @@
+.page {
+  font-size: 1em;
+  background: $color-yellow;
+  min-height: 100vh;
+  padding-bottom: rem(20);
+
+  .page-content {
+    width: rem(700);
+    margin: rem(30) auto 0;
+  }
+}

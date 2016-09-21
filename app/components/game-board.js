@@ -2,28 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   game: Ember.inject.service(),
-  classNames: ['grid-12', 'game-board'],
+  classNames: ['game-board'],
 
-  leftColumn: Ember.computed.filter('setup.cards', function(card, index) {
-    return index < this.get('setup.cards').length/2;
-  }),
-
-  rigthColumn: Ember.computed.filter('setup.cards', function(card, index) {
-    return index >= this.get('setup.cards').length/2;
-  }),
+  cards: Ember.computed.alias('setup.cards'),
 
   isNotEmpty: Ember.computed.notEmpty('setup.cards'),
 
   gridSize: Ember.computed('setup.cards', function() {
-    let size = 3;
-
-    if(this.get('setup.cards').length === 16) {
-      size = 6;
-    } else if(this.get('setup.cards').length === 36) {
-      size = 4;
-    }
-
-    return size;
+    return Math.round(Math.sqrt(this.get('cards').length));
   }),
 
   hits: Ember.computed.alias('game.hits'),
