@@ -70,6 +70,9 @@ const colorGenerator = {
 };
 
 export default Ember.Component.extend({
+  tagName: 'canvas',
+  classNames: ['confetti'],
+
   particles: computed(function() {
     let particles = [];
 
@@ -89,15 +92,18 @@ export default Ember.Component.extend({
     this._super(...arguments);
 
     //canvas init
-    var canvas = this.$('canvas').get(0);
-    this.set('context', canvas.getContext("2d"));
-    this.set('windowWidth', window.innerWidth);
-    this.set('windowHeight', window.innerHeight);
-    this.set('angle', 0);
-    this.set('tiltAngle', 0);
+    var canvas = this.$().get(0);
 
-    canvas.width = this.get('windowWidth');
-    canvas.height = this.get('windowHeight');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    this.setProperties({
+      context: canvas.getContext("2d"),
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight,
+      angle: 0,
+      tiltAngle: 0
+    });
 
     this.animationLoop();
   },
