@@ -1,3 +1,7 @@
+{{#if game.ended }}
+  {{game-over}}
+{{/if}}
+
 {{#game-board setup=model as |card flip|}}
   {{flip-card card=card onFlip=flip}}
 {{/game-board}}
