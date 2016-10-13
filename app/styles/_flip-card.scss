@@ -6,9 +6,10 @@
   height: 100%;
 }
 
-.flip-card-cover,
-.flip-card-figure {
-  animation-duration: 0s;
+.flip-card:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 .animated {
@@ -25,10 +26,13 @@
   background-color: $color-white;
   @include box-shadow-effect();
   height: 100%;
-  left: 0;
   position: absolute;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  animation-duration: 0s;
 }
 
 .flip-card-cover {
