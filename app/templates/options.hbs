@@ -1,0 +1,49 @@
+<div class="section">
+  <div class="section-title">
+    Options
+  </div>
+</div>
+
+<div class="section">
+  <div class="options-label">
+    Figure
+  </div>
+  <div class="options-container">
+    {{#each model.figures as |option|}}
+      {{#options-button option=option click=(route-action 'setFigure' option) selected=figure  as |option|}}
+        <img src="{{option.image}}" class="options-button-figure">
+      {{/options-button}}
+    {{/each}}
+  </div>
+</div>
+
+<div class="section">
+  <div class="options-label">
+    Size
+  </div>
+  <div class="options-container">
+    {{#each model.sizes as |option|}}
+      {{#options-button option=option click=(route-action 'setSize' option) selected=size as |option|}}
+          <span class="options-button-size">
+            {{option.label}}
+          </span>
+      {{/options-button}}
+    {{/each}}
+  </div>
+</div>
+
+<div class="section">
+  <div class="options-label">
+    Music
+  </div>
+  <div class="options-container">
+    <label class="options-switch">
+      <input type="checkbox" class="options-switch-checkbox">
+      <div class="options-switch-slider"></div>
+    </label>
+  </div>
+</div>
+
+<div class="section">
+  {{#link-to "application" class="section-back"}}&lt; Go Back{{/link-to}}
+</div>

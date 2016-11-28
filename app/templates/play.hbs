@@ -1,0 +1,11 @@
+{{#if game.ended }}
+  {{game-over}}
+{{/if}}
+
+{{#game-board setup=model as |card flip|}}
+  {{flip-card card=card onFlip=flip}}
+{{/game-board}}
+
+<div class="section">
+  {{#link-to "application" class="section-back"}}&lt; Go Back{{/link-to}}
+</div>

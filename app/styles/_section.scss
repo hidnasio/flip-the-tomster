@@ -1,0 +1,30 @@
+.section {
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  + .section {
+    margin-top: rem(30);
+  }
+
+  &.section-right {
+    justify-content: flex-end;
+  }
+
+  .section-title {
+    @include heading-font(55);
+    text-align: center;
+    flex: 1 1 auto;
+    text-transform: smallcaps;
+  }
+
+  .section-back {
+    @include heading-font(35);
+
+    &:hover {
+      color: $color-aqua;
+    }
+  }
+}

@@ -8,7 +8,7 @@ test('it generates random values between 1 and 32', function(assert) {
 
   service.shuffle = fakeShuffle;
 
-  let values = service.pickRandomValues(10, fakeShuffle);
+  let values = service.pickRandomValues(10, 'tomster');
 
   assert.equal(values.length, 10);
   assert.equal(values[0], 1);
@@ -21,7 +21,7 @@ test('it generates cards', function(assert) {
 
   service.shuffle = fakeShuffle;
 
-  let cards = service.generateCards(10, fakeShuffle);
+  let cards = service.generateCards(10, 'tomster');
 
   assert.equal(cards.length, 10);
   assert.equal(cards[0].get('value'), 1);
@@ -58,8 +58,8 @@ test('it creates new games with default size', function(assert) {
 
   service.shuffle = fakeShuffle;
 
-  let gameSetup = service.create({figure: 'octocat'});
+  let gameSetup = service.create({figure: 'dog'});
 
   assert.equal(gameSetup.get('cards').length, 16);
-  assert.equal(gameSetup.get('figure'), 'octocat');
+  assert.equal(gameSetup.get('figure'), 'dog');
 });

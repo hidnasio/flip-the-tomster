@@ -1,0 +1,30 @@
+/* keep the size fixed */
+.zoom-control {
+  position: fixed;
+  top: 0;
+  right: 40px;
+  padding: 10px;
+
+  > * {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: fade-out($color-black, 0.9);
+    border: none;
+    color: $color-white;
+    font-size: 20px;
+    line-height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background: fade-out($color-black, 0.8);
+    }
+
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+}

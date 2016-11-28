@@ -1,14 +1,11 @@
-<div class="row">
-  <div class="grid-12">
-    <h1 class="title">Flip The Tomster</h1>
+<div class="page">
+  <div class="header waves">
+    <h1 class="header-title">
+        {{#link-to "home"}}Flip The Tomster{{/link-to}}
+    </h1>
   </div>
-</div>
-<div class="row row--align-center">
-  <div class="grid-8 grid-12-mobile grid-12-tablet">
-    <div class="row">
-      {{#game-board setup=model as |card flip|}}
-        {{flip-card card=card onFlip=flip}}
-      {{/game-board}}
-    </div>
+  <div class="page-content">
+    {{outlet}}
   </div>
+  {{zoom-control}}
 </div>

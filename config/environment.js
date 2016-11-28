@@ -12,6 +12,10 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    EXTEND_PROTOTYPES: {
+      // Prevent Ember Data from overriding Date.parse.
+      Date: false
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance
@@ -20,7 +24,21 @@ module.exports = function(environment) {
 
     googleFonts: [
       'Lobster',
-      'Cabin'
+      'Play'
+    ],
+
+    figures: {
+      tomster: 47,
+      dog: 32
+    },
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['production'],
+        config: {
+          id: 'UA-84269222-1'
+        }
+      }
     ]
   };
 

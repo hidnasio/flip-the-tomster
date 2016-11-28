@@ -1,0 +1,38 @@
+* {
+  user-select: none;
+}
+
+html {
+  font-size: 10px;
+
+  @media (min-width: $size-extra-small) {
+    font-size: 13px;
+  }
+
+  @media (min-width: $size-small) {
+    font-size: 15px;
+  }
+
+  @media (min-width: $size-medium) {
+    font-size: 17px;
+  }
+
+  @media (min-width: $size-large) {
+    font-size: 19px;
+  }
+}
+
+body {
+  font-family: $font-base;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  -webkit-text-stroke: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+

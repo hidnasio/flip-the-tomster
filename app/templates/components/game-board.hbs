@@ -1,11 +1,22 @@
-{{#if isNotEmpty}}
-  {{#each setup.cards as |card|}}
-    <div class="game-board-card-container grid-{{gridSize}} grid-{{gridSize}}-mobile">
+<div class="section">
+  {{#if isNotEmpty}}
+    {{#each cards as |card index|}}
+      <div class="game-board-card-container game-board-size-{{gridSize}}">
       {{yield (hash value=card.value figure=setup.figure) (action "flip")}}
-    </div>
-  {{/each}}
-{{else}}
-  <p class="game-board-empty-message">
-    THERE ISN'T ANY CARD TO DISPLAY
-  </p>
+      </div>
+    {{/each}}
+  {{else}}
+    <p class="game-board-empty-message">
+      THERE AREN'T CARDS TO DISPLAY
+    </p>
+  {{/if}}
+</div>
+
+{{#if isNotEmpty}}
+  <div class="section section-right score">
+    <span class="score-label">hits:</span><span class="score-value hits">{{hits}}</span>
+    <span class="score-label">misses:</span><span class="score-value misses">{{misses}}</span>
+    <span class="score-label">rate:</span><span class="score-value">{{rate}}%</span>
+  </div>
 {{/if}}
+

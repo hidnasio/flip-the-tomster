@@ -12,6 +12,10 @@ module.exports = function(defaults) {
         srcDir: 'dist',
         import: ['amazium.css']
       }
+    },
+    autoprefixer: {
+      browsers: ['> 5%'],
+      cascade: false
     }
   });
 
