@@ -21,5 +21,8 @@ install:
   - npm install
   - bower install
 
+after_success:
+  if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ember deploy production; fi
+
 script:
   - npm test
