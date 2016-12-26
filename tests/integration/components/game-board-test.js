@@ -16,13 +16,13 @@ moduleForComponent('game-board', 'Integration | Component | game board', {
 
 test('it displays an error message if no cards', function(assert) {
   board.render(hbs`{{game-board}}`);
-  assert.equal(board.emptyMessage, "THERE ISN'T ANY CARD TO DISPLAY");
+  assert.equal(board.emptyMessage, "THERE AREN'T CARDS TO DISPLAY");
   assert.ok(board.hasEmptyMessage);
 });
 
 test('it displays an error message if no cards with empty block', function(assert) {
   board.render(hbs`{{#game-board}}{{/game-board}}`);
-  assert.equal(board.emptyMessage, "THERE ISN'T ANY CARD TO DISPLAY");
+  assert.equal(board.emptyMessage, "THERE AREN'T CARDS TO DISPLAY");
   assert.ok(board.hasEmptyMessage);
 });
 

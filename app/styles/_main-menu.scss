@@ -1,0 +1,28 @@
+.main-menu {
+  font-size: 1em;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+
+  li {
+    min-height: rem(80);
+
+    + li {
+      margin-top: rem(30);
+    }
+
+    a {
+      @include heading-font(55);
+
+      &:visited {
+        color: $color-white;
+      }
+
+      &:hover {
+        color: $color-aqua;
+        font-size: em(60);
+      }
+    }
+  }
+}
+

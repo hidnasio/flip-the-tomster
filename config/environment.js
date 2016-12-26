@@ -10,6 +10,10 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
     },
 
@@ -20,7 +24,21 @@ module.exports = function(environment) {
 
     googleFonts: [
       'Lobster',
-      'Cabin'
+      'Play'
+    ],
+
+    figures: {
+      tomster: 47,
+      dog: 32
+    },
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['production'],
+        config: {
+          id: 'UA-84269222-1'
+        }
+      }
     ]
   };
 
