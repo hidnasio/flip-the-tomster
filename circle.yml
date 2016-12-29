@@ -12,4 +12,4 @@ deployment:
     branch: master
     owner: mvdwg
     commands:
-      - ember deploy production
+      - node_modules/.bin/ember deploy production
