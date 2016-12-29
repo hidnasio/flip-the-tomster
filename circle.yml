@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 4.4.7
+dependencies:
+  pre:
+    - npm config set spin false
+    - npm install --silent -g bower
+  override:
+    - bower install --silent
+deployment:
+  production:
+    branch: master
+    owner: mvdwg
+    commands:
+      - ember deploy production
