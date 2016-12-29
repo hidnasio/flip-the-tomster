@@ -24,7 +24,7 @@ And then visit [http://localhost:4200](http://localhost:4200).
 
 ### Project's health
 
-[![Build Status](https://travis-ci.org/mvdwg/flip-the-tomster.svg?branch=master)](https://travis-ci.org/mvdwg/flip-the-tomster)
+[![CircleCI](https://circleci.com/gh/mvdwg/flip-the-tomster.svg?style=svg)](https://circleci.com/gh/mvdwg/flip-the-tomster)
 
 ## License
 
