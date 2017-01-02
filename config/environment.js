@@ -28,7 +28,7 @@ module.exports = function(environment) {
     ],
 
     figures: {
-      tomster: 47,
+      tomster: 48,
       dog: 32
     },
     metricsAdapters: [
